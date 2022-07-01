@@ -166,12 +166,6 @@ contract GenericNFT is ERC721, Ownable {
         return tokenId;
     }
 
-    // Test function
-    function test(string memory input) public view returns (string memory) {
-        console.log("test function called");
-        return input;
-    }
-
     // List of Token Ids for a given owner
     function listOfTokens(address owner) public view returns (uint256[] memory) {
 
@@ -204,13 +198,8 @@ contract GenericNFT is ERC721, Ownable {
         return tokens;
     }
 
-    function _baseURI() internal override pure returns (string memory) {
-        return "https://gateway.pinata.cloud/ipfs/";
-    }
-
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-        //string memory baseURI = _baseURI();
-        //return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, tokenURIs[tokenId])) : "";
+        
         return tokenURIs[tokenId];
     }
 }

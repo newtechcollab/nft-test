@@ -6,7 +6,7 @@ const HARDHAT_PUBLIC_KEY = process.env.HARDHAT_PUBLIC_KEY
 
 async function main() {
 
-    const nftcontractAddress = "0x854655230D0eFeAdEb027F48C1bADf14f48e7EEb";
+    const nftcontractAddress = "0x29ab16f752cf2c79E2d48a49C546635bf3Ec8D72";
     const nftcontract = await ethers.getContractAt("GenericNFT", nftcontractAddress);
   
     console.log('Contract address is: ', nftcontract.address);
